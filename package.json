@@ -1,0 +1,23 @@
+{
+  "name": "made-build",
+  "version": "0.1.0",
+  "description": "Front-End Build Solution",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonhao/made-build.git.git"
+  },
+  "keywords": [
+    "Build",
+    "Preprocessor"
+  ],
+  "author": "simonhao",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simonhao/made-build.git/issues"
+  },
+  "homepage": "https://github.com/simonhao/made-build.git#readme"
+}
