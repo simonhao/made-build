@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "description": "Front-End Build Solution",
   "main": "index.js",
+  "bin": {
+    "mb": "index.js"
+  },
   "scripts": {
     "test": "node ./test/index.js"
   },
