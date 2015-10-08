@@ -1,10 +1,10 @@
 {
   "name": "made-build",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "description": "Front-End Build Solution",
   "main": "index.js",
   "bin": {
-    "mb": "index.js"
+    "mb": "./bin/build.js"
   },
   "scripts": {
     "test": "node ./test/index.js"
