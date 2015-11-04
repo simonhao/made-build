@@ -25,7 +25,13 @@ exports.modules = {
         block: 'menu'
       },{
         id: 'comm/admin/title',
-        block: 'title'
+        block: 'title',
+        config: {
+          keywords: ['name', 'age', 'sex'],
+          name: {
+            first: 'simon'
+          }
+        }
       }]
     },{
       id: 'comm/admin/toolbar',
