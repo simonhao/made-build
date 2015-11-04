@@ -25,6 +25,9 @@
   "homepage": "https://github.com/simonhao/made-build.git#readme",
   "dependencies": {
     "async": "^1.5.0",
+    "escodegen": "^1.7.0",
+    "esprima": "^2.7.0",
+    "estraverse": "^4.1.1",
     "extend": "^3.0.0",
     "fs-extra": "^0.26.0",
     "glob": "^5.0.15",

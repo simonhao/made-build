@@ -1,7 +1,7 @@
 /**
- * layout entry
+ *
  * @author: SimonHao
- * @date:   2015-10-30 11:17:04
+ * @date:   2015-11-04 14:16:40
  */
 
 'use strict';
@@ -20,7 +20,7 @@ inherits(Module, MadeModule);
 Module.prototype.bind = function(){
   var classname = __class('header');
   var id = __id('header');
-  var src = __src('comm/admin/frame/readme.md');
+  var src = __src('readme.md');
   var instance = __instance('top');
 
   var name = find(__id('header'));
