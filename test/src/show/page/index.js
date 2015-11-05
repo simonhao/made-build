@@ -57,31 +57,21 @@ exports.external = {
   style: ['comm_styles']
 };
 
-//配置页面内模块打包
-exports.pack = {
-  script: [
-    ['comm/admin/menu', 'comm/admin/title'],
-    ['comm/admin/toolbar', 'comm/admin/navbar']
-  ],
-  style: [
-    ['comm/admin/menu', 'comm/admin/title'],
-    ['comm/admin/toolbar', 'comm/admin/navbar']
-  ]
-};
-
 //配置页面单独引入的脚本
 exports.script = {
-  head: [
-    'comm/tool/render'
-  ],
-  before: [
-    'http://open.mobile.qq.com/sdk/qqapi.js?_bid=152',
-    'comm/tool/speed'
-  ],
-  after: [
-    'http://pingjs.qq.com/ping.js',
-    'comm/tool/report'
-  ]
+  head: [{
+    id: 'comm/tool/render'
+  }],
+  before: [{
+    url: 'http://open.mobile.qq.com/sdk/qqapi.js?_bid=152'
+  },{
+    id: 'comm/tool/speed'
+  }],
+  after: [{
+    url: 'http://pingjs.qq.com/ping.js'
+  },{
+    id: 'comm/tool/report'
+  }]
 };
 
 //配置页面是否为单页

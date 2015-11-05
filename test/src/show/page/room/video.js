@@ -19,10 +19,6 @@ exports.external = {
 
 };
 
-//配置页面内模块打包
-exports.pack = {
-
-};
 
 //配置页面单独引入的脚本
 exports.script = {
