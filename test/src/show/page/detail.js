@@ -11,9 +11,9 @@ exports.modules = {
   id: 'comm/layout'
 };
 
-//配置页面外部依赖
 exports.external = {
-
+  script: ['comm_libs'],
+  style: ['comm_styles']
 };
 
 //配置页面单独引入的脚本

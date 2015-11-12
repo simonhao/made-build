@@ -28,7 +28,7 @@
     "extend": "^3.0.0",
     "fs-extra": "^0.26.2",
     "glob": "^6.0.1",
-    "made-build-file": "^0.2.0",
+    "made-build-file": "^0.2.1",
     "made-build-page": "^0.1.8",
     "made-config": "^0.1.2",
     "made-id": "^0.2.1",
