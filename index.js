@@ -8,10 +8,12 @@
 
 var extend = require('extend');
 var path   = require('path');
-var utils  = require('./lib/utils.js');
-var config = require('./lib/config.js');
+var config = require('made-config');
+var file   = require('made-build-file');
+var page   = require('made-build-page');
 var fs     = require('fs');
 var async  = require('async');
+var utils  = require('./lib/utils');
 
 /**
  * 启动构建
@@ -23,49 +25,56 @@ var async  = require('async');
  * @param {String} options.model    构建的模式，包括：dev,test,dist。默认为dev
  */
 module.exports = function(actions, options){
+  if(arguments.length === 1 && !Array.isArray(actions)){
+    options = actions;
+    actions = null;
+  }
+
   var options = extend({
-    basedir: path.join(process.cwd(), 'src'),
     confdir: path.join(process.cwd(), 'conf'),
-    distdir: path.join(process.cwd(), 'dist'),
     model: 'dev'
   }, options);
 
-  if(!fs.existsSync(options.basedir)){
-    console.errorc('basedir not exists: ', options.basedir);
-    return;
-  }
 
   if(!fs.existsSync(options.confdir)){
     console.error('confdir not exists: ', options.confdir);
     return;
   }
 
-  var actions = actions || [];
+  config.init(options.confdir);
 
-  if(actions.length === 0){
-    actions = utils.actions(options.basedir);
-  }
+  var comm_options = config.get('comm');
+  var actions = actions || utils.actions(comm_options.path.base) || [];
 
-  config.init(options);
+  file.init({
+    basedir: comm_options.path.base,
+    distdir: comm_options.path.dist,
+    server: comm_options.server
+  });
+
+  page.init({
+    basedir: comm_options.path.base,
+    distdir: comm_options.path.dist,
+    server: comm_options.server
+  });
 
   async.eachSeries(actions, function(action_name, next){
-    var build_path = path.join(options.basedir, action_name);
+    var build_path = path.join(comm_options.path.base, action_name);
 
     if(fs.existsSync(build_path) && fs.statSync(build_path).isDirectory()){
-      console.info('start build: ', action_name);
+      console.info('+ start build: ', action_name);
 
-      require('./lib/build.js')(build_path, options, function(err){
+      require('./lib/build')(build_path, options.model, function(err){
         if(err){
           console.error(err);
         }else{
-          console.info('finish build: ', action_name);
+          console.info('+ finish build: ', action_name);
         }
 
         next();
       });
     }else{
       console.error('build action is not exists: ', action_name);
-
       next();
     }
   });

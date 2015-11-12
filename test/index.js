@@ -9,9 +9,7 @@
 var build = require('../index.js');
 var path  = require('path');
 
-build([], {
-  basedir: path.join(__dirname, 'src'),
+build({
   confdir: path.join(__dirname, 'conf'),
-  distdir: path.join(__dirname, 'dist'),
   model: 'dist'
 });

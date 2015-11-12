@@ -1,1 +1,1 @@
-div.wrap
+div.wrap(src='readme.md')

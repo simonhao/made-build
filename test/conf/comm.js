@@ -6,6 +6,8 @@
 
 'use strict';
 
+var path = require('path');
+
 /**
  * 服务器配置
  */
@@ -14,4 +16,9 @@ exports.server = {
   web_path: '/',
   static_domain: 'http://static.dev.qq.com',
   static_path: '/'
+};
+
+exports.path = {
+  base: path.join(__dirname, '../src'),
+  dist: path.join(__dirname, '../dist')
 };

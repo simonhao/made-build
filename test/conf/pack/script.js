@@ -11,7 +11,7 @@
  * @type {Object}
  */
 exports.comm_libs = {
-  require: ['jquery', 'inherits', 'made-module'],
+  require: ['jquery', 'inherits', 'made-module', 'comm/layout'],
   external: [],
   entry: []
 };

@@ -57,22 +57,5 @@ exports.external = {
   style: ['comm_styles']
 };
 
-//配置页面单独引入的脚本
-exports.script = {
-  head: [{
-    id: 'comm/tool/render'
-  }],
-  before: [{
-    url: 'http://open.mobile.qq.com/sdk/qqapi.js?_bid=152'
-  },{
-    id: 'comm/tool/speed'
-  }],
-  after: [{
-    url: 'http://pingjs.qq.com/ping.js'
-  },{
-    id: 'comm/tool/report'
-  }]
-};
-
 //配置页面是否为单页
 exports.spage = false;
