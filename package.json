@@ -4,7 +4,7 @@
   "description": "Front-End Build Solution",
   "main": "index.js",
   "bin": {
-    "mb": "./bin/build.js"
+    "mb": "./bin/mb.js"
   },
   "scripts": {
     "test": "node ./test/index.js"
@@ -26,6 +26,7 @@
   "dependencies": {
     "async": "^1.5.0",
     "cheerio": "^0.19.0",
+    "commander": "^2.9.0",
     "extend": "^3.0.0",
     "fs-extra": "^0.26.2",
     "glob": "^6.0.1",

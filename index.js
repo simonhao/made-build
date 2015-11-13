@@ -30,6 +30,10 @@ module.exports = function(actions, options){
     actions = null;
   }
 
+  if(Array.isArray(actions) && actions.length === 0){
+    actions = null;
+  }
+
   var options = extend({
     confdir: path.join(process.cwd(), 'conf'),
     model: 'dev'
@@ -57,6 +61,8 @@ module.exports = function(actions, options){
     distdir: comm_options.path.dist,
     server: comm_options.server
   });
+
+  console.info('build with', options.model, 'model');
 
   async.eachSeries(actions, function(action_name, next){
     var build_path = path.join(comm_options.path.base, action_name);
