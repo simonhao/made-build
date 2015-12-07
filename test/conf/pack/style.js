@@ -11,6 +11,11 @@
  * @type {Object}
  */
 exports.comm_styles = {
-  modules: [],
+  modules: ['comm/style/icon', 'comm/style/box'],
   external: []
+};
+
+exports.base_styles = {
+  modules: ['comm/layout', 'comm/admin/frame'],
+  external: ['comm_styles']
 };

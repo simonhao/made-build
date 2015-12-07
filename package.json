@@ -30,12 +30,13 @@
     "extend": "^3.0.0",
     "fs-extra": "^0.26.2",
     "glob": "^6.0.1",
-    "made-build-file": "^0.2.1",
-    "made-build-page": "^0.1.11",
+    "made-build-file": "^0.2.2",
+    "made-build-page": "^0.1.13",
     "made-config": "^0.1.2",
-    "made-id": "^0.2.1",
+    "made-id": "^0.2.3",
     "made-pack-script": "^0.1.0",
-    "made-script": "^0.1.2",
-    "made-view": "^0.3.7"
+    "made-pack-style": "^0.1.1",
+    "made-script": "^0.1.4",
+    "made-view": "^0.3.9"
   }
 }

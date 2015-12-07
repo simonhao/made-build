@@ -8,7 +8,14 @@
 
 //配置页面模块
 exports.modules = {
-  id: 'comm/layout'
+  id: 'comm/layout',
+  config: {
+    keywords: [1,2,3]
+  },
+  modules:[{
+    id: 'comm/admin',
+    block: 'main'
+  }]
 };
 
 exports.external = {

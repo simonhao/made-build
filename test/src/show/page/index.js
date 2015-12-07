@@ -54,7 +54,7 @@ exports.modules = {
 //配置页面外部依赖
 exports.external = {
   script: ['comm_libs'],
-  style: ['comm_styles']
+  style: ['comm_styles', 'base_styles']
 };
 
 //配置页面是否为单页
