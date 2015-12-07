@@ -37,6 +37,7 @@
     "made-pack-script": "^0.1.0",
     "made-pack-style": "^0.1.1",
     "made-script": "^0.1.4",
-    "made-view": "^0.3.9"
+    "made-view": "^0.3.9",
+    "uglify-js": "^2.6.1"
   }
 }

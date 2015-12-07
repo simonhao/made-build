@@ -20,7 +20,7 @@ exports.modules = {
 
 exports.external = {
   script: ['comm_libs'],
-  style: ['comm_styles']
+  style: ['comm_styles', 'base_styles']
 };
 
 //配置页面单独引入的脚本
