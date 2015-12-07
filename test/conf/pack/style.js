@@ -11,7 +11,7 @@
  * @type {Object}
  */
 exports.comm_styles = {
-  modules: ['comm/style/icon', 'comm/style/box'],
+  modules: ['comm/style/base', 'comm/style/icon', 'comm/style/box'],
   external: []
 };
 
