@@ -11,11 +11,11 @@
  * @type {Object}
  */
 exports.comm_styles = {
-  modules: ['comm/style/base', 'comm/style/icon', 'comm/style/box'],
+  require: ['comm/style/base', 'comm/style/icon', 'comm/style/box'],
   external: []
 };
 
 exports.base_styles = {
-  modules: ['comm/layout', 'comm/admin/frame'],
+  require: ['comm/layout', 'comm/admin/frame'],
   external: ['comm_styles']
 };
