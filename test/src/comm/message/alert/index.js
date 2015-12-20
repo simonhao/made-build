@@ -6,5 +6,14 @@
 
 'use strict';
 
-module.exports = function(options, instance){
+var alert_template = require('./view.tpl');
+
+var $ = require('jquery');
+
+module.exports = function(msg){
+
+  $('body').append(alert_template({
+    msg: msg
+  }));
+
 };

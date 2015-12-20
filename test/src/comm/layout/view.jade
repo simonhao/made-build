@@ -5,10 +5,7 @@ html
     meta(name='description', content='#{desc}')
     meta(name='keywords', content='#{keywords}')
     title #{title}
+    block head
   body
-    header.header
-      block header
-    main.main
-      block main
-    footer.footer
-      block footer
+    block body
+    block foot
