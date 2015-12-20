@@ -18,6 +18,9 @@ exports.server = {
   static_path: '/'
 };
 
+/**
+ * 路径配置
+ */
 exports.path = {
   base: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist')
