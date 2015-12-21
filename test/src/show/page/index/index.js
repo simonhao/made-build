@@ -8,6 +8,7 @@
 
 var MadeModule = require('made-module');
 var inherits   = require('inherits');
+var report     = require('report');
 
 function Module(options, instance){
   MadeModule.call(this, __module_id, instance);

@@ -6,4 +6,10 @@
 
 'use strict';
 
-console.log('init project');
+var program = require('commander');
+
+program
+  .usage('[action_name [,..]]')
+  .parse(process.argv);
+
+console.log('init empty project', program.args);

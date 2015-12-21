@@ -1,0 +1,14 @@
+{
+  "name": "made-build-test",
+  "version": "0.1.0",
+  "description": "made build test case",
+  "main": "index.js",
+  "scripts": {
+    "test": "mb build"
+  },
+  "browser":{
+    "report":"comm/tool/report"
+  },
+  "author": "simonhao",
+  "license": "MIT"
+}
