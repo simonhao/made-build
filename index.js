@@ -22,7 +22,7 @@ var build  = require('./lib/build');
  * @param {String} options.confdir  配置文件目录，默认为当前执行路径下的conf
  * @param {String} options.model    构建的模式，包括：dev,test,dist。默认为dev
  */
-module.exports = function(actions, options){
+module.exports = function(actions, options, done){
   var actions = actions || [];
   var options = extend({
     confdir: path.join(process.cwd(), 'conf'),
@@ -50,7 +50,7 @@ module.exports = function(actions, options){
     }else{
       console.error('build action', action_name, 'is not exists or not directory');
     }
-  });
+  }, done);
 };
 
 

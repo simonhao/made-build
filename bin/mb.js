@@ -14,5 +14,4 @@ var info    = require('../package');
 program
   .version(info.version)
   .command('build [action_name]', 'build project', {isDefault: true})
-  .command('init', 'init empty project')
   .parse(process.argv);
