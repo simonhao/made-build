@@ -6,29 +6,16 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
-var report     = require('report');
+import Module from 'made-module';
 
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
+class Index extends Module{
+  constructor(options, instance){
+    super();
 
-  this.title = document.querySelector(__class('title'));
+    var admin = entry('comm/admin');
 
-  this.bind();
+    admin.load(2);
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.bind = function(){
-  this.title.addEventListener('click', function(){
-    alert('qqqq');
-  });
-};
-
-Module.prototype.destructor = function(){
-  MadeModule.prototype.call(this);
-};
-
-
-module.exports = Module;
+export default Index;

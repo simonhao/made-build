@@ -6,22 +6,20 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
-var tips = require('comm/message/alert');
+import Module from 'made-module';
+import tips from 'comm/message/alert';
 
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
+class Title extends Module{
+  constructor(options, instance){
+    super();
 
-  document.querySelector(__id('wrap')).addEventListener('click', function(event){
-    tips('HaHa!!!!');
-  });
+    document.querySelector(__id('wrap')).addEventListener('click', function(event){
+      tips('HaHa!!!!');
+    });
+  }
+  destructor(){
+    super.destructor();
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.destructor = function(){
-  MadeModule.prototype.call(this);
-};
-
-module.exports = Module;
+export default Title;

@@ -6,23 +6,18 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
+import Module from 'made-module';
 
-var AdminFrame = require('comm/admin/frame');
-
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
-
-  this.admin_frame = new AdminFrame({}, __instance(''));
-
+class Admin extends Module{
+  constructor(options, instance){
+    super();
+  }
+  load(page){
+    console.log('load' + page);
+  }
+  destructor(){
+    super.destructor()
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.destructor = function(){
-  MadeModule.prototype.call(this);
-};
-
-
-module.exports = Module;
+export default Admin;

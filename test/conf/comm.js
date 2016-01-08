@@ -25,3 +25,23 @@ exports.path = {
   base: path.join(__dirname, '../src'),
   dist: path.join(__dirname, '../dist')
 };
+
+exports.view = {
+  entry: 'view.jade',
+  ext: '.jade'
+};
+
+exports.style = {
+  entry: 'style.css',
+  ext: '.css'
+};
+
+exports.script = {
+  entry: 'index.js',
+  ext: '.js'
+};
+
+exports.template = {
+  entry: 'view.tpl',
+  ext: '.tpl'
+};

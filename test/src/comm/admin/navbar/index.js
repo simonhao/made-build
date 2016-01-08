@@ -6,25 +6,19 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
+import Module from 'made-module';
 
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
-
-  this.options  = options;
-
-  this.wrap = document.querySelector(__id('wrap'));
-
-  this.bind(instance);
+class Navbar extends Module{
+  constructor(options, instance){
+    super();
+    this.wrap = document.querySelector(__id('wrap'));
+    this.bind(instance);
+  }
+  bind(instance){
+    this.wrap.addEventListener('click', function(event){
+      alert(instance);
+    });
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.bind = function(instance){
-  this.wrap.addEventListener('click', function(event){
-    alert(instance);
-  });
-};
-
-module.exports = Module;
+export default Navbar;

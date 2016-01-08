@@ -9,7 +9,7 @@
 var build = require('../index.js');
 var path  = require('path');
 
-build(['comm', 'show', 'test'], {
+build(['comm', 'show'], {
   confdir: path.join(__dirname, 'conf'),
-  model: 'dist',
+  model: 'dev',
 });

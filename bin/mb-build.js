@@ -49,6 +49,5 @@ function get_all_actions(base_path){
       all_actions.unshift('comm');
     }
   }
-
   return all_actions;
 }

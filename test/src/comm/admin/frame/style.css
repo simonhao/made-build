@@ -1,0 +1,20 @@
+/**
+ * Frame
+ * @author: SimonHao
+ * @date:   2015-11-17 11:06:01
+ */
+
+:root{
+  .wrap{
+    position: relative;
+    padding-left: 100px;
+    background: url('back.png') center no-repeat;
+  }
+
+  .menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+  }
+}

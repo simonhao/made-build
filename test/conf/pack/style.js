@@ -11,7 +11,7 @@
  * @type {Object}
  */
 exports.comm_styles = {
-  require: ['comm/style/base', 'comm/style/icon', 'comm/style/box'],
+  require: ['comm/style/base', 'comm/style/icon', 'comm/style/box', 'comm/message/alert'],
   external: []
 };
 

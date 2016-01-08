@@ -6,11 +6,11 @@
 
 'use strict';
 
-var alert_template = require('./view.tpl');
+import alert_template from 'view.tpl';
 
-var $ = require('jquery');
+import * as $ from 'jquery';
 
-module.exports = function(msg){
+export default function(msg){
 
   $('body').append(alert_template({
     msg: msg

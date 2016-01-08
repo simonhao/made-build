@@ -1,6 +1,6 @@
 {
   "name": "made-build",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Front-End Build Solution",
   "main": "index.js",
   "bin": {
@@ -31,10 +31,10 @@
     "extend": "^3.0.0",
     "fs-extra": "^0.26.2",
     "glob": "^6.0.1",
-    "made-id": "^0.2.4",
+    "made-id": "^0.3.0",
     "made-pack-script": "^0.2.0",
     "made-pack-style": "^0.2.0",
-    "made-view": "^0.6.0",
+    "made-view": "^0.7.0",
     "uglify-js": "^2.6.1"
   }
 }

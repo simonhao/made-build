@@ -6,29 +6,23 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
+import Module from 'made-module';
 
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
+class Layout extends Module{
+  constructor(options, instance){
+    super();
 
-  this.bind();
+    this.bind();
+  }
+  bind(){
+    var classname = __class('header');
+    var id = __id('header');
+    var src = __src('comm/admin/frame/readme.md');
+    var instance = __instance('top');
+  }
+  destructor(){
+    super.destructor();
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.bind = function(){
-  var classname = __class('header');
-  var id = __id('header');
-  var src = __src('comm/admin/frame/readme.md');
-  var instance = __instance('top');
-
-  var name = find(__id('header'));
-};
-
-Module.prototype.destructor = function(){
-  MadeModule.prototype.call(this);
-};
-
-
-module.exports = Module;
+export default Layout;

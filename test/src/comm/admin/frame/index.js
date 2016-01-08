@@ -6,29 +6,26 @@
 
 'use strict';
 
-var MadeModule = require('made-module');
-var inherits   = require('inherits');
+import Module from 'made-module';
 
-function Module(options, instance){
-  MadeModule.call(this, __module_id, instance);
 
-  this.bind(instance);
+class AdminFrame extends Module{
+  constructor(options, instance){
+    super();
+
+    this.bind(instance);
+  }
+  bind(instance){
+    var classname = __class('wrap');
+    var id = __id('wrap');
+    var src = __src('readme.md');
+    var instance = __instance('top');
+
+    console.log(classname, id, src, instance);
+  }
+  destructor(){
+    super.destructor();
+  }
 }
 
-inherits(Module, MadeModule);
-
-Module.prototype.bind = function(instance){
-  var classname = __class('wrap');
-  var id = __id('wrap');
-  var src = __src('readme.md');
-  var instance = __instance('top');
-
-  console.log(classname, id, src, instance);
-};
-
-Module.prototype.destructor = function(){
-  MadeModule.prototype.call(this);
-};
-
-
-module.exports = Module;
+export default AdminFrame;
