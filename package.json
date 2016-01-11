@@ -1,6 +1,6 @@
 {
   "name": "made-build",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Front-End Build Solution",
   "main": "index.js",
   "bin": {
