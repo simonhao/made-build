@@ -15,6 +15,10 @@ class Index extends Module{
     var admin = entry('comm/admin');
 
     admin.load(2);
+
+    admin.on('loaded', function(page){
+      console.log('loaded', page);
+    });
   }
 }
 

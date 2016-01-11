@@ -31,7 +31,6 @@ module.exports = function(actions, options, done){
     config.init(options.confdir);
   }else{
     console.error('confdir not exists or not directory: ', options.confdir);
-    return;
   }
 
   var comm_options = config.get('comm');
