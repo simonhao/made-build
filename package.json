@@ -1,6 +1,6 @@
 {
   "name": "made-build",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Front-End Build Solution",
   "main": "index.js",
   "bin": {
@@ -24,17 +24,19 @@
   },
   "homepage": "https://github.com/simonhao/made-build.git#readme",
   "dependencies": {
-    "async": "^1.5.0",
+    "async": "^1.5.2",
     "cheerio": "^0.19.0",
     "clean-css": "^3.4.8",
     "commander": "^2.9.0",
+    "events": "^1.1.0",
     "extend": "^3.0.0",
-    "fs-extra": "^0.26.2",
-    "glob": "^6.0.1",
-    "made-id": "^0.3.0",
-    "made-pack-script": "^0.2.0",
-    "made-pack-style": "^0.2.0",
-    "made-view": "^0.7.0",
+    "fs-extra": "^0.26.4",
+    "glob": "^6.0.4",
+    "made-id": "^0.3.1",
+    "made-pack-script": "^0.2.2",
+    "made-pack-style": "^0.2.1",
+    "made-script": "^0.3.2",
+    "made-view": "^0.7.1",
     "uglify-js": "^2.6.1"
   }
 }
