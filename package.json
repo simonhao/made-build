@@ -38,5 +38,11 @@
     "made-script": "^0.3.2",
     "made-view": "^0.7.2",
     "uglify-js": "^2.6.1"
+  },
+  "devDependencies": {
+    "inherits": "^2.0.1",
+    "jquery": "^2.2.2",
+    "made-instance": "^0.1.0",
+    "made-module": "^0.2.5"
   }
 }
