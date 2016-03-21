@@ -4,7 +4,11 @@ Front-End Build Solution
 
 ## How to use?
 
-### cd made-build
-### npm run test
+```shell
+cd made-build
+```
 
-### The page and resource in the './test/dist' 
+```shell
+npm run test
+```
+##### The page and resource in the './test/dist' 
