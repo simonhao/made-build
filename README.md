@@ -19,11 +19,13 @@ npm install made-build -g
 Windows - C:\Users\Administrator\AppData\Roaming\npm\node_modules\made-build 
 Mac - /usr/local/bin/node_modules/made_build
 
-其中的test为DEMO
+其中的test为DEMO，请将test复制到其他位置
 ```
 
 ####开始构建
 ```shell
+cd test
+
 mb build
 ```
 
